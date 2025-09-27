@@ -1,0 +1,17 @@
+{
+    "name": "Base",
+    "image": "ubuntu:plucky",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils": {
+            "installZsh": false,
+            "username": "sag",
+            "upgradePackages": true
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker": {
+            "version": "latest",
+            "moby": false
+        },
+        "ghcr.io/sansathan/devcontainer-feature/common": {}
+    },
+    "remoteUser": "sag"
+}
