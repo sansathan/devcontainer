@@ -2,7 +2,8 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
-      image:
+      images:
+        type: string
         description: "Image to release"
         required: true
       version:
@@ -10,8 +11,25 @@ on:
         required: true
 
 jobs:
-  release:
+  prepare:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Set matrix
+        id: set-matrix
+        run: |
+          images="${{ github.event.inputs.images }}"
+          # Convert comma-separated string to JSON array
+          matrix=$(echo "$images" | tr ',' '\n' | jq -R -s -c 'split("\n") | map(select(. != ""))')
+          echo "matrix=$matrix" >> $GITHUB_OUTPUT
+
+  release:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        image: ${{ fromJson(needs.prepare.outputs.matrix) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -24,7 +42,7 @@ jobs:
       - name: Pre-build dev container image
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/${{ github.repository }}-${{ github.event.inputs.image }}
+          imageName: ghcr.io/${{ github.repository }}-${{ matrix.image }}
           imageTag: ${{ github.event.inputs.version }}
           push: always
-          subFolder: src/${{ github.event.inputs.image }}
+          subFolder: src/${{ matrix.image }}
