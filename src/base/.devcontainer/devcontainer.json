@@ -13,5 +13,12 @@
         },
         "ghcr.io/sansathan/devcontainer-feature/common": {}
     },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.vscode-yaml"
+            ]
+        }
+    },
     "remoteUser": "sag"
 }

@@ -1,0 +1,16 @@
+{
+    "name": "Bun Dev Container",
+    "image": "ghcr.io/sansathan/devcontainer-base:latest",
+    "features": {
+        "ghcr.io/devcontainer-community/devcontainer-features/bun.sh": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "oven.bun-vscode"
+            ]
+        }
+    }
+}

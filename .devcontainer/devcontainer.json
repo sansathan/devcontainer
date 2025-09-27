@@ -1,4 +1,4 @@
 {
 	"name": "Base",
-	"image": "sagit2025/dev-base:latest"
+	"image": "ghcr.io/sansathan/devcontainer-base:v1.0.0"
 }
