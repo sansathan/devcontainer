@@ -1,21 +1,11 @@
 {
     "name": "Svelte Dev Container",
-    "image": "ghcr.io/sansathan/devcontainer-base:latest",
-    "features": {
-        "ghcr.io/devcontainer-community/devcontainer-features/bun.sh": {
-            "version": "latest"
-        }
-    },
+    "image": "ghcr.io/sansathan/devcontainer-bun:latest",
     "customizations": {
         "vscode": {
             "extensions": [
                 "svelte.svelte-vscode",
-                "oven.bun-vscode",
-                "bradlc.vscode-tailwindcss",
-                "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint",
-                "apollographql.vscode-apollo",
-                "mquandalle.graphql"
+                "bradlc.vscode-tailwindcss"
             ]
         }
     }

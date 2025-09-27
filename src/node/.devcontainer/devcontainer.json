@@ -1,15 +1,14 @@
 {
-    "name": "Bun Dev Container",
+    "name": "Node Dev Container",
     "image": "ghcr.io/sansathan/devcontainer-base:latest",
     "features": {
-        "ghcr.io/devcontainer-community/devcontainer-features/bun.sh": {
-            "version": "latest"
+        "ghcr.io/devcontainers/features/node": {
+            "version": "lts"
         }
     },
     "customizations": {
         "vscode": {
             "extensions": [
-                "oven.bun-vscode",
                 "esbenp.prettier-vscode",
                 "dbaeumer.vscode-eslint",
                 "apollographql.vscode-apollo",

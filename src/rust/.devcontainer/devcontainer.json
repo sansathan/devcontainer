@@ -1,0 +1,15 @@
+{
+    "name": "Rust Dev Container",
+    "image": "ghcr.io/sansathan/devcontainer-base:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/rust:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "skellock.just",
+                "fill-labs.dependi"
+            ]
+        }
+    }
+}
