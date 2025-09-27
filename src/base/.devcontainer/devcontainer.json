@@ -16,7 +16,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "redhat.vscode-yaml"
+                "redhat.vscode-yaml",
+                "davidanson.vscode-markdownlint",
+                "eamodio.gitlens",
+                "codezombiech.gitignore"
             ]
         }
     },

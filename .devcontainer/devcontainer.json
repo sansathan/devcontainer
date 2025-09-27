@@ -1,4 +1,5 @@
 {
 	"name": "Base",
-	"image": "ghcr.io/sansathan/devcontainer-base:v1.0.0"
+	"image": "ghcr.io/sansathan/devcontainer-node:latest",
+	"postCreateCommand": "npm i -g @devcontainers/cli"
 }
