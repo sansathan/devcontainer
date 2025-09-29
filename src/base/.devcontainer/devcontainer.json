@@ -7,7 +7,9 @@
             "username": "sag",
             "upgradePackages": true
         },
-        "ghcr.io/devcontainers/features/docker-in-docker": {},
+        "ghcr.io/devcontainers/features/docker-in-docker": {
+            "moby": false
+        },
         "ghcr.io/sansathan/devcontainer-feature/common": {}
     },
     "customizations": {
