@@ -30,6 +30,8 @@ jobs:
     strategy:
       matrix:
         image: ${{ fromJson(needs.prepare.outputs.matrix) }}
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -51,14 +53,22 @@ jobs:
           push: always
           subFolder: src/${{ matrix.image }}
           platform: linux/amd64,linux/arm64
+      - name: Set matrix output
+        id: set-matrix
+        run: echo "matrix=${{ needs.prepare.outputs.matrix }}" >> $GITHUB_OUTPUT
 
   release-base:
     needs: release
     runs-on: ubuntu-24.04-arm
-    if: contains(needs.prepare.outputs.matrix, 'base')
+    if: contains(needs.release.outputs.matrix, 'base')
     strategy:
       matrix:
-        image: [bun,go,node,rust,svelte]
+        image:
+          - bun
+          - go
+          - node
+          - rust
+          - svelte
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
