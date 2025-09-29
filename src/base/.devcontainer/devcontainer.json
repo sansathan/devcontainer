@@ -23,5 +23,8 @@
             ]
         }
     },
+    "runArgs": [
+        "--network=host"
+    ],
     "remoteUser": "sag"
 }
