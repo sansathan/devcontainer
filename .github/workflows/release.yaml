@@ -85,8 +85,8 @@ jobs:
       - name: Pre-build base container image
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/${{ github.repository }}-${ matrix.image }
+          imageName: ghcr.io/${{ github.repository }}-${{ matrix.image }}
           imageTag: ${{ github.event.inputs.version }}
           push: always
-          subFolder: src/${ matrix.image }
+          subFolder: src/${{ matrix.image }}
           platform: linux/amd64,linux/arm64
