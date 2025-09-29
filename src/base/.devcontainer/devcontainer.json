@@ -1,15 +1,13 @@
 {
     "name": "Base",
-    "image": "ubuntu:jammy",
+    "image": "ubuntu:noble",
     "features": {
         "ghcr.io/devcontainers/features/common-utils": {
             "installZsh": false,
             "username": "sag",
             "upgradePackages": true
         },
-        "ghcr.io/devcontainers/features/docker-in-docker": {
-            "moby": false
-        },
+        "ghcr.io/sansathan/devcontainer-feature/dind": {},
         "ghcr.io/sansathan/devcontainer-feature/common": {}
     },
     "customizations": {
