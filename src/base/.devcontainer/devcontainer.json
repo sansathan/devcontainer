@@ -1,6 +1,6 @@
 {
     "name": "Base",
-    "image": "ubuntu:noble",
+    "image": "ubuntu:plucky",
     "features": {
         "ghcr.io/devcontainers/features/common-utils": {
             "installZsh": false,
