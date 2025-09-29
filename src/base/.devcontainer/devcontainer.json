@@ -1,16 +1,13 @@
 {
     "name": "Base",
-    "image": "ubuntu:plucky",
+    "image": "ubuntu:jammy",
     "features": {
         "ghcr.io/devcontainers/features/common-utils": {
             "installZsh": false,
             "username": "sag",
             "upgradePackages": true
         },
-        "ghcr.io/devcontainers/features/docker-outside-of-docker": {
-            "version": "latest",
-            "moby": false
-        },
+        "ghcr.io/devcontainers/features/docker-in-docker": {},
         "ghcr.io/sansathan/devcontainer-feature/common": {}
     },
     "customizations": {
@@ -23,8 +20,5 @@
             ]
         }
     },
-    "runArgs": [
-        "--network=host"
-    ],
     "remoteUser": "sag"
 }
