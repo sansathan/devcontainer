@@ -1,0 +1,7 @@
+{
+    "name": "Python Dev Container",
+    "image": "ghcr.io/sansathan/devcontainer-base:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {}
+    }
+}

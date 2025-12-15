@@ -69,6 +69,7 @@ jobs:
           - node
           - rust
           - svelte
+          - python
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
