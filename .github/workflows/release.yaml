@@ -69,6 +69,7 @@ jobs:
           - node
           - rust
           - svelte
+          - svelte-node
           - python
     steps:
       - name: Checkout repository

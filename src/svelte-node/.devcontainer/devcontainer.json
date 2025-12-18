@@ -1,0 +1,12 @@
+{
+    "name": "Svelte Node Dev Container",
+    "image": "ghcr.io/sansathan/devcontainer-node:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "svelte.svelte-vscode",
+                "bradlc.vscode-tailwindcss"
+            ]
+        }
+    }
+}

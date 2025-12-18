@@ -10,11 +10,10 @@
         "vscode": {
             "extensions": [
                 "oven.bun-vscode",
-                "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint",
                 "apollographql.vscode-apollo",
                 "mquandalle.graphql",
-                "fill-labs.dependi"
+                "fill-labs.dependi",
+                "biomejs.biome"
             ]
         }
     }
