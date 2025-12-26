@@ -4,7 +4,7 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils": {
             "installZsh": false,
-            "username": "sag",
+            "username": "vscode",
             "upgradePackages": true
         },
         "ghcr.io/sansathan/devcontainer-feature/dind": {},
@@ -20,5 +20,5 @@
             ]
         }
     },
-    "remoteUser": "sag"
+    "remoteUser": "vscode"
 }
